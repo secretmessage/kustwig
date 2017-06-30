@@ -1,10 +1,7 @@
 <?php
 require 'vendor/autoload.php';
 $loader = new Twig_Loader_Filesystem(__DIR__);
-$twig = new Twig_Environment($loader, array(
-    // Uncomment the line below to cache compiled templates
-    // 'cache' => __DIR__.'/../cache',
-));
+$twig = new Twig_Environment($loader, array());
 $name = filter_input(INPUT_GET, 'name', FILTER_SANITIZE_STRING);
 if (!$name) {
     $name = "Mercury, Venus, Mars, Jupiter, Saturn, Uranus & Neptune.";
