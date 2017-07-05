@@ -4,10 +4,12 @@
 <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <title>Twig test</title>
+    {{ htmlFields | striptags | title}}
 </head>
 <body>
-    
-    <h1>Hello world</h1>
+    <header>
+        <h1>Hello world</h1>
+    </header>
     
     <ul>
         {% for planet in planets %}
