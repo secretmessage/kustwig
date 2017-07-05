@@ -10,27 +10,32 @@
     <link rel="mask-icon" href="icon.svg" color="#79589F">
 </head>
 <body>
-    <header>
-        <h1>Hello world</h1>
-    </header>
-    
-    <ul>
-        {% for planet in planets %}
-            <li>{{ planet }}</li>
-        {% endfor %}
-    </ul>
-{#
-    {% for i in range(0, 3) %}
-        Welcome to {{ i }}<br>
-    {% endfor %}
-#}
-    {% filter upper %}
-
-    {{ htmlFields | striptags}}
-
-    {% endfilter %}
 
     {{ include('articles/potatoes.html.twig') }}
     
+    {% block author %}
+        <div id="hcard-Hiking-Fan" class="vcard">
+        <img style="float:left; margin-right:4px" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="photo of " class="photo"/>
+        <a class="url fn" href="https://www.google.com/">Hiking Fan</a>
+        <div class="org">Google, Inc.</div>
+        <a class="email" href="mailto:hikingfan@gmail.com">hikingfan@gmail.com</a>
+        <div class="adr">
+        <div class="street-address">123 Any Street</div>
+        <span class="locality">Any City</span>
+        , 
+        <span class="region">AnyState</span>
+        , 
+        <span class="postal-code">12345</span>
+
+        <span class="country-name">USA</span>
+
+        </div>
+        <div class="tel">5555555555</div>
+        <a class="url" href="aim:goim?screenname=hikingfan">AIM</a>
+        <a class="url" href="ymsgr:sendIM?hikingfan">YIM</a>
+        <a class="url" href="xmpp:hikingfan@google.com">Jabber</a>
+        <div><span class="category">example</span>, <span class="category">fake</span></div><p style="font-size:smaller;">This <a href="http://microformats.org/wiki/hcard">hCard</a> created with the <a href="http://microformats.org/code/hcard/creator">hCard creator</a>.</p>
+        </div>
+    {% endblock %}
 </body>
 </html>
